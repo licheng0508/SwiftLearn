@@ -1,0 +1,981 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECC1BE002744A2C100A7AE0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BDFF2744A2C100A7AE0C /* AppDelegate.swift */; };
+		ECC1BE022744A2C100A7AE0C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BE012744A2C100A7AE0C /* GameViewController.swift */; };
+		ECC1BE052744A2C100A7AE0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BE032744A2C100A7AE0C /* Main.storyboard */; };
+		ECC1BE082744A2C100A7AE0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BE062744A2C100A7AE0C /* LaunchScreen.storyboard */; };
+		ECC1BE0C2744A2C100A7AE0C /* LearnScene.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = ECC1BE0B2744A2C100A7AE0C /* LearnScene.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ECC1BE122744A2C100A7AE0C /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BE102744A2C100A7AE0C /* Interface.storyboard */; };
+		ECC1BE182744A2C100A7AE0C /* LearnScene Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = ECC1BE172744A2C100A7AE0C /* LearnScene Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		ECC1BE1D2744A2C100A7AE0C /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BE1C2744A2C100A7AE0C /* InterfaceController.swift */; };
+		ECC1BE1F2744A2C100A7AE0C /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BE1E2744A2C100A7AE0C /* ExtensionDelegate.swift */; };
+		ECC1BE282744A2C100A7AE0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BE272744A2C100A7AE0C /* AppDelegate.swift */; };
+		ECC1BE2A2744A2C100A7AE0C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BE292744A2C100A7AE0C /* GameViewController.swift */; };
+		ECC1BE2D2744A2C100A7AE0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BE2B2744A2C100A7AE0C /* Main.storyboard */; };
+		ECC1BE302744A2C100A7AE0C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BE2E2744A2C100A7AE0C /* LaunchScreen.storyboard */; };
+		ECC1BE382744A2C100A7AE0C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BE372744A2C100A7AE0C /* AppDelegate.swift */; };
+		ECC1BE3A2744A2C100A7AE0C /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BE392744A2C100A7AE0C /* GameViewController.swift */; };
+		ECC1BE3D2744A2C100A7AE0C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BE3B2744A2C100A7AE0C /* Main.storyboard */; };
+		ECC1BE3F2744A2C100A7AE0C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BDF52744A2BC00A7AE0C /* GameController.swift */; };
+		ECC1BE402744A2C100A7AE0C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BDF52744A2BC00A7AE0C /* GameController.swift */; };
+		ECC1BE412744A2C100A7AE0C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BDF52744A2BC00A7AE0C /* GameController.swift */; };
+		ECC1BE422744A2C100A7AE0C /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC1BDF52744A2BC00A7AE0C /* GameController.swift */; };
+		ECC1BE432744A2C100A7AE0C /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BDF62744A2BC00A7AE0C /* Art.scnassets */; };
+		ECC1BE442744A2C100A7AE0C /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BDF62744A2BC00A7AE0C /* Art.scnassets */; };
+		ECC1BE452744A2C100A7AE0C /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BDF62744A2BC00A7AE0C /* Art.scnassets */; };
+		ECC1BE462744A2C100A7AE0C /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BDF62744A2BC00A7AE0C /* Art.scnassets */; };
+		ECC1BE472744A2C100A7AE0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BDF72744A2C100A7AE0C /* Assets.xcassets */; };
+		ECC1BE482744A2C100A7AE0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BDF72744A2C100A7AE0C /* Assets.xcassets */; };
+		ECC1BE492744A2C100A7AE0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BDF72744A2C100A7AE0C /* Assets.xcassets */; };
+		ECC1BE4A2744A2C100A7AE0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC1BDF72744A2C100A7AE0C /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECC1BE0D2744A2C100A7AE0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1BDF02744A2BC00A7AE0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC1BE0A2744A2C100A7AE0C;
+			remoteInfo = "LearnScene watchOS App";
+		};
+		ECC1BE192744A2C100A7AE0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC1BDF02744A2BC00A7AE0C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC1BE162744A2C100A7AE0C;
+			remoteInfo = "LearnScene watchOS App Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ECC1BE502744A2C100A7AE0C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				ECC1BE182744A2C100A7AE0C /* LearnScene Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE542744A2C100A7AE0C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				ECC1BE0C2744A2C100A7AE0C /* LearnScene.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		ECC1BDF52744A2BC00A7AE0C /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		ECC1BDF62744A2BC00A7AE0C /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
+		ECC1BDF72744A2C100A7AE0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECC1BDFC2744A2C100A7AE0C /* LearnScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC1BDFF2744A2C100A7AE0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECC1BE012744A2C100A7AE0C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		ECC1BE042744A2C100A7AE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECC1BE072744A2C100A7AE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECC1BE0B2744A2C100A7AE0C /* LearnScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC1BE112744A2C100A7AE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		ECC1BE172744A2C100A7AE0C /* LearnScene Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "LearnScene Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC1BE1C2744A2C100A7AE0C /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		ECC1BE1E2744A2C100A7AE0C /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		ECC1BE202744A2C100A7AE0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC1BE252744A2C100A7AE0C /* LearnScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC1BE272744A2C100A7AE0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECC1BE292744A2C100A7AE0C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		ECC1BE2C2744A2C100A7AE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECC1BE2F2744A2C100A7AE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ECC1BE352744A2C100A7AE0C /* LearnScene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnScene.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC1BE372744A2C100A7AE0C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ECC1BE392744A2C100A7AE0C /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		ECC1BE3C2744A2C100A7AE0C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECC1BE3E2744A2C100A7AE0C /* LearnScene_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LearnScene_macOS.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECC1BDF92744A2C100A7AE0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE142744A2C100A7AE0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE222744A2C100A7AE0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE322744A2C100A7AE0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECC1BDEF2744A2BC00A7AE0C = {
+			isa = PBXGroup;
+			children = (
+				ECC1BDF42744A2BC00A7AE0C /* LearnScene Shared */,
+				ECC1BDFE2744A2C100A7AE0C /* LearnScene iOS */,
+				ECC1BE0F2744A2C100A7AE0C /* LearnScene watchOS App */,
+				ECC1BE1B2744A2C100A7AE0C /* LearnScene watchOS App Extension */,
+				ECC1BE262744A2C100A7AE0C /* LearnScene tvOS */,
+				ECC1BE362744A2C100A7AE0C /* LearnScene macOS */,
+				ECC1BDFD2744A2C100A7AE0C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECC1BDF42744A2BC00A7AE0C /* LearnScene Shared */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1BDF52744A2BC00A7AE0C /* GameController.swift */,
+				ECC1BDF62744A2BC00A7AE0C /* Art.scnassets */,
+				ECC1BDF72744A2C100A7AE0C /* Assets.xcassets */,
+			);
+			path = "LearnScene Shared";
+			sourceTree = "<group>";
+		};
+		ECC1BDFD2744A2C100A7AE0C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1BDFC2744A2C100A7AE0C /* LearnScene.app */,
+				ECC1BE0B2744A2C100A7AE0C /* LearnScene.app */,
+				ECC1BE172744A2C100A7AE0C /* LearnScene Extension.appex */,
+				ECC1BE252744A2C100A7AE0C /* LearnScene.app */,
+				ECC1BE352744A2C100A7AE0C /* LearnScene.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECC1BDFE2744A2C100A7AE0C /* LearnScene iOS */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1BDFF2744A2C100A7AE0C /* AppDelegate.swift */,
+				ECC1BE012744A2C100A7AE0C /* GameViewController.swift */,
+				ECC1BE032744A2C100A7AE0C /* Main.storyboard */,
+				ECC1BE062744A2C100A7AE0C /* LaunchScreen.storyboard */,
+			);
+			path = "LearnScene iOS";
+			sourceTree = "<group>";
+		};
+		ECC1BE0F2744A2C100A7AE0C /* LearnScene watchOS App */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1BE102744A2C100A7AE0C /* Interface.storyboard */,
+			);
+			path = "LearnScene watchOS App";
+			sourceTree = "<group>";
+		};
+		ECC1BE1B2744A2C100A7AE0C /* LearnScene watchOS App Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1BE1C2744A2C100A7AE0C /* InterfaceController.swift */,
+				ECC1BE1E2744A2C100A7AE0C /* ExtensionDelegate.swift */,
+				ECC1BE202744A2C100A7AE0C /* Info.plist */,
+			);
+			path = "LearnScene watchOS App Extension";
+			sourceTree = "<group>";
+		};
+		ECC1BE262744A2C100A7AE0C /* LearnScene tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1BE272744A2C100A7AE0C /* AppDelegate.swift */,
+				ECC1BE292744A2C100A7AE0C /* GameViewController.swift */,
+				ECC1BE2B2744A2C100A7AE0C /* Main.storyboard */,
+				ECC1BE2E2744A2C100A7AE0C /* LaunchScreen.storyboard */,
+			);
+			path = "LearnScene tvOS";
+			sourceTree = "<group>";
+		};
+		ECC1BE362744A2C100A7AE0C /* LearnScene macOS */ = {
+			isa = PBXGroup;
+			children = (
+				ECC1BE372744A2C100A7AE0C /* AppDelegate.swift */,
+				ECC1BE392744A2C100A7AE0C /* GameViewController.swift */,
+				ECC1BE3B2744A2C100A7AE0C /* Main.storyboard */,
+				ECC1BE3E2744A2C100A7AE0C /* LearnScene_macOS.entitlements */,
+			);
+			path = "LearnScene macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECC1BDFB2744A2C100A7AE0C /* LearnScene iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC1BE552744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene iOS" */;
+			buildPhases = (
+				ECC1BDF82744A2C100A7AE0C /* Sources */,
+				ECC1BDF92744A2C100A7AE0C /* Frameworks */,
+				ECC1BDFA2744A2C100A7AE0C /* Resources */,
+				ECC1BE542744A2C100A7AE0C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC1BE0E2744A2C100A7AE0C /* PBXTargetDependency */,
+			);
+			name = "LearnScene iOS";
+			productName = "LearnScene iOS";
+			productReference = ECC1BDFC2744A2C100A7AE0C /* LearnScene.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECC1BE0A2744A2C100A7AE0C /* LearnScene watchOS App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC1BE512744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene watchOS App" */;
+			buildPhases = (
+				ECC1BE092744A2C100A7AE0C /* Resources */,
+				ECC1BE502744A2C100A7AE0C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC1BE1A2744A2C100A7AE0C /* PBXTargetDependency */,
+			);
+			name = "LearnScene watchOS App";
+			productName = "LearnScene watchOS App";
+			productReference = ECC1BE0B2744A2C100A7AE0C /* LearnScene.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		ECC1BE162744A2C100A7AE0C /* LearnScene watchOS App Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC1BE4D2744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene watchOS App Extension" */;
+			buildPhases = (
+				ECC1BE132744A2C100A7AE0C /* Sources */,
+				ECC1BE142744A2C100A7AE0C /* Frameworks */,
+				ECC1BE152744A2C100A7AE0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LearnScene watchOS App Extension";
+			productName = "LearnScene watchOS App Extension";
+			productReference = ECC1BE172744A2C100A7AE0C /* LearnScene Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		ECC1BE242744A2C100A7AE0C /* LearnScene tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC1BE582744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene tvOS" */;
+			buildPhases = (
+				ECC1BE212744A2C100A7AE0C /* Sources */,
+				ECC1BE222744A2C100A7AE0C /* Frameworks */,
+				ECC1BE232744A2C100A7AE0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LearnScene tvOS";
+			productName = "LearnScene tvOS";
+			productReference = ECC1BE252744A2C100A7AE0C /* LearnScene.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECC1BE342744A2C100A7AE0C /* LearnScene macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC1BE5B2744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene macOS" */;
+			buildPhases = (
+				ECC1BE312744A2C100A7AE0C /* Sources */,
+				ECC1BE322744A2C100A7AE0C /* Frameworks */,
+				ECC1BE332744A2C100A7AE0C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "LearnScene macOS";
+			productName = "LearnScene macOS";
+			productReference = ECC1BE352744A2C100A7AE0C /* LearnScene.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECC1BDF02744A2BC00A7AE0C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					ECC1BDFB2744A2C100A7AE0C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					ECC1BE0A2744A2C100A7AE0C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					ECC1BE162744A2C100A7AE0C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					ECC1BE242744A2C100A7AE0C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					ECC1BE342744A2C100A7AE0C = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = ECC1BDF32744A2BC00A7AE0C /* Build configuration list for PBXProject "LearnScene" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECC1BDEF2744A2BC00A7AE0C;
+			productRefGroup = ECC1BDFD2744A2C100A7AE0C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECC1BDFB2744A2C100A7AE0C /* LearnScene iOS */,
+				ECC1BE0A2744A2C100A7AE0C /* LearnScene watchOS App */,
+				ECC1BE162744A2C100A7AE0C /* LearnScene watchOS App Extension */,
+				ECC1BE242744A2C100A7AE0C /* LearnScene tvOS */,
+				ECC1BE342744A2C100A7AE0C /* LearnScene macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECC1BDFA2744A2C100A7AE0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1BE052744A2C100A7AE0C /* Main.storyboard in Resources */,
+				ECC1BE082744A2C100A7AE0C /* LaunchScreen.storyboard in Resources */,
+				ECC1BE472744A2C100A7AE0C /* Assets.xcassets in Resources */,
+				ECC1BE432744A2C100A7AE0C /* Art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE092744A2C100A7AE0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1BE482744A2C100A7AE0C /* Assets.xcassets in Resources */,
+				ECC1BE122744A2C100A7AE0C /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE152744A2C100A7AE0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1BE442744A2C100A7AE0C /* Art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE232744A2C100A7AE0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1BE2D2744A2C100A7AE0C /* Main.storyboard in Resources */,
+				ECC1BE302744A2C100A7AE0C /* LaunchScreen.storyboard in Resources */,
+				ECC1BE492744A2C100A7AE0C /* Assets.xcassets in Resources */,
+				ECC1BE452744A2C100A7AE0C /* Art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE332744A2C100A7AE0C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1BE3D2744A2C100A7AE0C /* Main.storyboard in Resources */,
+				ECC1BE4A2744A2C100A7AE0C /* Assets.xcassets in Resources */,
+				ECC1BE462744A2C100A7AE0C /* Art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECC1BDF82744A2C100A7AE0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1BE022744A2C100A7AE0C /* GameViewController.swift in Sources */,
+				ECC1BE3F2744A2C100A7AE0C /* GameController.swift in Sources */,
+				ECC1BE002744A2C100A7AE0C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE132744A2C100A7AE0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1BE1F2744A2C100A7AE0C /* ExtensionDelegate.swift in Sources */,
+				ECC1BE402744A2C100A7AE0C /* GameController.swift in Sources */,
+				ECC1BE1D2744A2C100A7AE0C /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE212744A2C100A7AE0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1BE2A2744A2C100A7AE0C /* GameViewController.swift in Sources */,
+				ECC1BE412744A2C100A7AE0C /* GameController.swift in Sources */,
+				ECC1BE282744A2C100A7AE0C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC1BE312744A2C100A7AE0C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC1BE3A2744A2C100A7AE0C /* GameViewController.swift in Sources */,
+				ECC1BE422744A2C100A7AE0C /* GameController.swift in Sources */,
+				ECC1BE382744A2C100A7AE0C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECC1BE0E2744A2C100A7AE0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC1BE0A2744A2C100A7AE0C /* LearnScene watchOS App */;
+			targetProxy = ECC1BE0D2744A2C100A7AE0C /* PBXContainerItemProxy */;
+		};
+		ECC1BE1A2744A2C100A7AE0C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC1BE162744A2C100A7AE0C /* LearnScene watchOS App Extension */;
+			targetProxy = ECC1BE192744A2C100A7AE0C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECC1BE032744A2C100A7AE0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC1BE042744A2C100A7AE0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECC1BE062744A2C100A7AE0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC1BE072744A2C100A7AE0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ECC1BE102744A2C100A7AE0C /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC1BE112744A2C100A7AE0C /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+		ECC1BE2B2744A2C100A7AE0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC1BE2C2744A2C100A7AE0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECC1BE2E2744A2C100A7AE0C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC1BE2F2744A2C100A7AE0C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		ECC1BE3B2744A2C100A7AE0C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC1BE3C2744A2C100A7AE0C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECC1BE4B2744A2C100A7AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ECC1BE4C2744A2C100A7AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		ECC1BE4E2744A2C100A7AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LearnScene watchOS App Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LearnScene watchOS App Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "LearnScene Extension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		ECC1BE4F2744A2C100A7AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "LearnScene watchOS App Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "LearnScene watchOS App Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_WKExtensionDelegateClassName = "$(PRODUCT_MODULE_NAME).ExtensionDelegate";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "LearnScene Extension";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		ECC1BE522744A2C100A7AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = LearnScene_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = LearnScene;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.memorize.learn.LearnScene;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene.watchkitapp;
+				PRODUCT_NAME = LearnScene;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Debug;
+		};
+		ECC1BE532744A2C100A7AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				IBSC_MODULE = LearnScene_Extension;
+				INFOPLIST_KEY_CFBundleDisplayName = LearnScene;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.memorize.learn.LearnScene;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene.watchkitapp;
+				PRODUCT_NAME = LearnScene;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 8.0;
+			};
+			name = Release;
+		};
+		ECC1BE562744A2C100A7AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene;
+				PRODUCT_NAME = LearnScene;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ECC1BE572744A2C100A7AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene;
+				PRODUCT_NAME = LearnScene;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECC1BE592744A2C100A7AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene;
+				PRODUCT_NAME = LearnScene;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+			};
+			name = Debug;
+		};
+		ECC1BE5A2744A2C100A7AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene;
+				PRODUCT_NAME = LearnScene;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 15.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECC1BE5C2744A2C100A7AE0C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "LearnScene macOS/LearnScene_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene;
+				PRODUCT_NAME = LearnScene;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		ECC1BE5D2744A2C100A7AE0C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "LearnScene macOS/LearnScene_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HLN64U2TGW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memorize.learn.LearnScene;
+				PRODUCT_NAME = LearnScene;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECC1BDF32744A2BC00A7AE0C /* Build configuration list for PBXProject "LearnScene" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC1BE4B2744A2C100A7AE0C /* Debug */,
+				ECC1BE4C2744A2C100A7AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC1BE4D2744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene watchOS App Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC1BE4E2744A2C100A7AE0C /* Debug */,
+				ECC1BE4F2744A2C100A7AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC1BE512744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene watchOS App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC1BE522744A2C100A7AE0C /* Debug */,
+				ECC1BE532744A2C100A7AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC1BE552744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC1BE562744A2C100A7AE0C /* Debug */,
+				ECC1BE572744A2C100A7AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC1BE582744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC1BE592744A2C100A7AE0C /* Debug */,
+				ECC1BE5A2744A2C100A7AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC1BE5B2744A2C100A7AE0C /* Build configuration list for PBXNativeTarget "LearnScene macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC1BE5C2744A2C100A7AE0C /* Debug */,
+				ECC1BE5D2744A2C100A7AE0C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECC1BDF02744A2BC00A7AE0C /* Project object */;
+}
