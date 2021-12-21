@@ -19,6 +19,9 @@ struct ContentView: View {
             
             Text("Hello, world!")
                 .foregroundColor(.orange)
+            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/) {
+                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+            }
         }
         .padding(.horizontal)
         .foregroundColor(.red)
