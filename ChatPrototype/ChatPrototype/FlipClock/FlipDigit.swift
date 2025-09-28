@@ -47,7 +47,7 @@ struct FlipDigit: View {
             
             if isMinuteOnes {
                 Text(String(format: "%02d", currentSecond))
-                    .font(.system(size: 14, weight: .medium, design: .monospaced))
+                    .font(.system(size: 14, weight: .bold, design: .monospaced))
                     .foregroundColor(theme.foregroundColor.opacity(0.9))
                     .padding(6)
                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)

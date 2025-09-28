@@ -43,24 +43,47 @@ struct FlipClock: View {
     }
     
     public var body: some View {
-        HStack(spacing: 8) {
-            digitPair(for: hour)
-            colon
-            digitPair(for: minute, showSecondsInOnes: true)
-        }
-        .onReceive(timer) { newDate in
-            let oldSecond = calendar.component(.second, from: date)
-            let newSecond = calendar.component(.second, from: newDate)
+        
+        VStack(spacing: 12) {
+            // 日期
+            HStack(){
+                Text(getMonthDay())
+                    .font(theme.dayFont)
+            }
+            .padding(.top)
             
-            date = newDate
-            
-            // 每秒闪烁冒号
-            if newSecond != oldSecond {
-                withAnimation(.easeInOut(duration: 0.4)) {
-                    showColon.toggle()
+            // 时间显示
+            HStack(spacing: 8) {
+                digitPair(for: hour)
+                colon
+                digitPair(for: minute, showSecondsInOnes: true)
+            }.onReceive(timer) { newDate in
+                let oldSecond = calendar.component(.second, from: date)
+                let newSecond = calendar.component(.second, from: newDate)
+                date = newDate
+                // 每秒闪烁冒号
+                if newSecond != oldSecond {
+                    withAnimation(.easeInOut(duration: 0.4)) {
+                        showColon.toggle()
+                    }
                 }
             }
+            
+            // 描述
+            HStack(){
+                Spacer()
+                Text("HOUR")
+                    .font(theme.dayFont)
+                Spacer()
+                Spacer()
+                Text("MIN")
+                    .font(theme.dayFont)
+                Spacer()
+            }
+            .padding(.bottom)
+            
         }
+        .background(Color.gray)
     }
     
     @ViewBuilder
@@ -88,9 +111,24 @@ struct FlipClock: View {
             .foregroundColor(showColon ? theme.foregroundColor : theme.foregroundColor.opacity(0.6))
             .frame(width: 36)
     }
+    
+    private func getMonthDay() -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "zh_CN")
+        dateFormatter.dateFormat = "MM"
+        let monthStr = dateFormatter.string(from: date)
+
+        dateFormatter.dateFormat = "dd"
+        let dayStr = dateFormatter.string(from: date)
+
+        dateFormatter.dateFormat = "EEEE"
+        let weekdayStr = dateFormatter.string(from: date)
+        
+        return "\(monthStr).\(dayStr) \(weekdayStr)"
+    }
 }
 
 #Preview {
-    FlipClock(theme: .classic, is24Hour: true)
     FlipClock(theme: .light, is24Hour: true)
 }

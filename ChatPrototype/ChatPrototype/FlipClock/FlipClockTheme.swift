@@ -15,6 +15,7 @@ public struct FlipClockTheme {
     public var cornerRadius: CGFloat
     public var shadow: Color
     public var highlight: Color
+    public var dayFont: Font
     
     public static let classic = FlipClockTheme(
         backgroundColor: .black,
@@ -22,7 +23,8 @@ public struct FlipClockTheme {
         font: .system(size: 60, weight: .bold, design: .monospaced),
         cornerRadius: 8,
         shadow: .black.opacity(0.6),
-        highlight: .white.opacity(0.2)
+        highlight: .white.opacity(0.2),
+        dayFont: .system(size: 16, weight: .bold, design: .monospaced)
     )
     
     public static let light = FlipClockTheme(
@@ -31,6 +33,7 @@ public struct FlipClockTheme {
         font: .system(size: 60, weight: .bold, design: .monospaced),
         cornerRadius: 8,
         shadow: .gray.opacity(0.3),
-        highlight: .white.opacity(0.6)
+        highlight: .white.opacity(0.6),
+        dayFont: .system(size: 16, weight: .bold, design: .monospaced)
     )
 }
