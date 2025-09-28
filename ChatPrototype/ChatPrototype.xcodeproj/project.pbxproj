@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		EC106B752E839480005836A3 /* ChatPrototype */ = {
+		ECB9A9992E89227800C04CFC /* ChatPrototype */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ChatPrototype;
 			sourceTree = "<group>";
@@ -32,7 +32,7 @@
 		EC106B6A2E839480005836A3 = {
 			isa = PBXGroup;
 			children = (
-				EC106B752E839480005836A3 /* ChatPrototype */,
+				ECB9A9992E89227800C04CFC /* ChatPrototype */,
 				EC106B742E839480005836A3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -61,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				EC106B752E839480005836A3 /* ChatPrototype */,
+				ECB9A9992E89227800C04CFC /* ChatPrototype */,
 			);
 			name = ChatPrototype;
 			packageProductDependencies = (
