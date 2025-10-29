@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct FlipClockCard: View {
+    
+    let theme: FlipClockTheme
+    
     var body: some View {
-        
-        FlipClock(theme: .classic, is24Hour: true)
+        FlipClock(theme: theme, is24Hour: true)
     }
 }
 
 #Preview {
-    FlipClockCard()
+    FlipClockCard(theme: .classic)
 }

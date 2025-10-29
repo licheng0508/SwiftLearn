@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        FlipClockCard()
+        FlipClockCard(theme: .classic)
+        FlipClockCard(theme: .light)
     }
 }
 

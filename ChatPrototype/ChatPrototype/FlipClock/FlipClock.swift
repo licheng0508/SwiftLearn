@@ -107,7 +107,7 @@ struct FlipClock: View {
     
     private var colon: some View {
         Text(":")
-            .font(theme.font)
+            .font(.system(size: 44, weight: .bold, design: .monospaced))
             .foregroundColor(showColon ? theme.foregroundColor : theme.foregroundColor.opacity(0.6))
             .frame(width: 36)
     }
