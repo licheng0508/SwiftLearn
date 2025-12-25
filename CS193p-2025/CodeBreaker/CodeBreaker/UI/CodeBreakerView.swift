@@ -18,7 +18,12 @@ struct CodeBreakerView: View {
     var body: some View {
         VStack {
             Button("Restart", systemImage: "arrow.circlepath", action: restart)
-            CodeView(code: game.masterCode)
+            CodeView(code: game.masterCode) {
+                ElapsedTime(startTime: game.startTime, endTime: game.endTime)
+                    .flexibleSystemFont()
+                    .monospaced()
+                    .lineLimit(1)
+            }
             ScrollView {
                 if !game.isOver {
                     CodeView(code: game.guess, selection: $selection) {
