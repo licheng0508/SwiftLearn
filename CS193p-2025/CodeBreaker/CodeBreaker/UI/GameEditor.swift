@@ -17,16 +17,7 @@ struct GameEditor: View {
                 TextField("Name", text: $game.name)
             }
             Section("Page") {
-                List {
-                    ForEach(game.pegChoices.indices, id: \.self) { index in
-                        ColorPicker(
-                            selection: $game.pegChoices[index],
-                            supportsOpacity: false
-                        ) {
-                            Text("Peg Choice \(index + 1)")
-                        }
-                    }
-                }
+                PegChoicesChooser(pegChoices: $game.pegChoices)
             }
         }
     }
