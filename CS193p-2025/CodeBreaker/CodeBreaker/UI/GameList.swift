@@ -13,6 +13,7 @@ struct GameList: View {
     
     // MARK: Data
     @State private var games: [CodeBreaker] = []
+    @State private var gameToEdit: CodeBreaker?
     
     var body: some View {
         List(selection: $selection) {
@@ -21,7 +22,11 @@ struct GameList: View {
                     GameSummary(game: game)
                 }
                 .contextMenu {
+                    editButton(for: game)
                     deleteButton(for: game)
+                }
+                .swipeActions(edge: .leading) {
+                    editButton(for: game).tint(.accentColor)
                 }
             }
             .onDelete { offsets in
@@ -44,13 +49,44 @@ struct GameList: View {
         .onAppear { addSampleGames() }
     }
     
+    func editButton(for game: CodeBreaker) -> some View {
+        Button("Edit", systemImage: "pencil") {
+            gameToEdit = game
+        }
+    }
+    
     func addGameButton() -> some View {
         Button("Add Game", systemImage: "plus") {
-            withAnimation {
-                let newGame = CodeBreaker(name: "Untitled", pegChoices: [.red, .blue])
-                games.append(newGame)
+            gameToEdit = CodeBreaker(name: "Untitled", pegChoices: [.red, .blue])
+        }
+        .sheet(isPresented: showGameEditor) {
+            gameEditor
+        }
+    }
+    
+    @ViewBuilder
+    var gameEditor: some View {
+        if let gameToEdit {
+            let copyOfGameToEdit = CodeBreaker(name: gameToEdit.name, pegChoices: gameToEdit.pegChoices)
+            GameEditor(game: copyOfGameToEdit) {
+                if let index = games.firstIndex(of: gameToEdit) {
+                    games[index] = copyOfGameToEdit
+                }else{
+                    games.insert(copyOfGameToEdit, at: 0)
+                }
             }
         }
+    }
+    
+    var showGameEditor: Binding<Bool> {
+        Binding<Bool>(
+            get: { gameToEdit != nil },
+            set: { newValue in
+                if !newValue {
+                    gameToEdit = nil
+                }
+            }
+        )
     }
     
     func deleteButton(for game: CodeBreaker) -> some View {
