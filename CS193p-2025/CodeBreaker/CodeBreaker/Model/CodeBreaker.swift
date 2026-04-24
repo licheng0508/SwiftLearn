@@ -6,20 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
-typealias Peg = Color
+typealias Peg = String
 
-@Observable class CodeBreaker {
+@Model class CodeBreaker {
     var name: String
-    var masterCode: Code = Code(kind: .master(isHidden: true))
-    var guess: Code = Code(kind: .guess)
-    var attempts: [Code] = []
+    @Relationship(deleteRule: .cascade) var masterCode: Code = Code(kind: .master(isHidden: true))
+    @Relationship(deleteRule: .cascade) var guess: Code = Code(kind: .guess)
+    @Relationship(deleteRule: .cascade) var attempts: [Code] = []
     var pegChoices: [Peg]
-    var startTime: Date?
+    @Transient var startTime: Date?
     var endTime: Date?
     var elapsedTime: TimeInterval = 0
     
-    init(name: String = "Code Breaher", pegChoices: [Peg] = [.red, .green, .blue, .yellow]) {
+    init(name: String = "Code Breaher", pegChoices: [Peg]) {
         self.name = name
         self.pegChoices = pegChoices
         masterCode.randomize(from: pegChoices)
@@ -54,8 +55,10 @@ typealias Peg = Color
     
     func attemptGuess() {
         guard !attempts.contains(where: { $0.pegs == guess.pegs }) else { return }
-        var attempt = guess
-        attempt.kind = .attempt(guess.match(against: masterCode))
+        let attempt = Code(
+            kind: .attempt(guess.match(against: masterCode)),
+            pegs: guess.pegs
+        )
         attempts.insert(attempt, at: 0)
         guess.reset()
         if isOver {
@@ -68,16 +71,5 @@ typealias Peg = Color
     func setGuessPeg(_ peg: Peg, at index: Int) {
         guard guess.pegs.indices.contains(index) else { return }
         guess.pegs[index] = peg
-    }
-}
-
-extension CodeBreaker: Identifiable, Hashable, Equatable {
-    
-    static func == (lhs: CodeBreaker, rhs: CodeBreaker) -> Bool {
-        return lhs.id == rhs.id
-    }
-    
-    func hash(into hasher: inout Hasher) {
-        hasher.combine(id)
     }
 }

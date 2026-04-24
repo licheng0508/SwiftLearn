@@ -27,7 +27,7 @@ struct PegChooser: View {
 }
 
 #Preview {
-    PegChooser(choices: [.red, .blue, .green, .yellow]) { peg in
+    PegChooser(choices: [Color.red, .blue, .green, .yellow].map(\.hex)) { peg in
         print("chose \(peg)")
     }
     .padding()

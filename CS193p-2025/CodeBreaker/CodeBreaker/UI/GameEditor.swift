@@ -30,7 +30,7 @@ struct GameEditor: View {
                         }
                 }
                 Section("Page") {
-                    PegChoicesChooser(pegChoices: $game.pegChoices)
+                    PegChoicesChooser(pegChoices: $game.pegColorChoices)
                 }
             }
             .toolbar {
