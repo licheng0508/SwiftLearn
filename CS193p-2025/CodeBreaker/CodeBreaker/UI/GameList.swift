@@ -6,14 +6,45 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct GameList: View {
     
+    // MARK: Data In
+    @Environment(\.modelContext) var modelContext
+    
+    // MARK: Data Shared with Me
+    
     @Binding var selection: CodeBreaker?
+    @Query private var games: [CodeBreaker]
     
     // MARK: Data
-    @State private var games: [CodeBreaker] = []
     @State private var gameToEdit: CodeBreaker?
+    
+    init(sortBy: SortOption = .name, nameContains search: String = "", selection: Binding<CodeBreaker?>) {
+        _selection = selection
+        let lowercaseSearch = search.lowercased()
+        let capitalizedSearch = search.capitalized
+        let predicate = #Predicate<CodeBreaker> { game in
+            search.isEmpty || game.name.contains(lowercaseSearch) || game.name.contains(capitalizedSearch)
+        }
+        switch sortBy {
+        case .name: _games = Query(filter: predicate, sort: \CodeBreaker.name)
+        case .recent: _games = Query(filter: predicate, sort: \CodeBreaker.lastAttemptDate, order: .reverse)
+        }
+    }
+    
+    enum SortOption: CaseIterable {
+        case name
+        case recent
+        
+        var title: String {
+            switch self {
+            case .name: "Sort by Name"
+            case .recent: "Recent"
+            }
+        }
+    }
     
     var body: some View {
         List(selection: $selection) {
@@ -30,10 +61,9 @@ struct GameList: View {
                 }
             }
             .onDelete { offsets in
-                games.remove(atOffsets: offsets)
-            }
-            .onMove { offsets, destination in
-                games.move(fromOffsets: offsets, toOffset: destination)
+                for offset in offsets {
+                    modelContext.delete(games[offset])
+                }
             }
         }
         .onChange(of: games) {
@@ -69,11 +99,10 @@ struct GameList: View {
         if let gameToEdit {
             let copyOfGameToEdit = CodeBreaker(name: gameToEdit.name, pegChoices: gameToEdit.pegChoices)
             GameEditor(game: copyOfGameToEdit) {
-                if let index = games.firstIndex(of: gameToEdit) {
-                    games[index] = copyOfGameToEdit
-                }else{
-                    games.insert(copyOfGameToEdit, at: 0)
+                if games.contains(gameToEdit) {
+                    modelContext.delete(gameToEdit)
                 }
+                modelContext.insert(copyOfGameToEdit)
             }
         }
     }
@@ -92,22 +121,22 @@ struct GameList: View {
     func deleteButton(for game: CodeBreaker) -> some View {
         Button("Delete", systemImage: "minus.circle", role: .destructive) {
             withAnimation {
-                games.removeAll { $0 == game }
+                modelContext.delete(game)
             }
         }
     }
     
     func addSampleGames() {
-        if games.isEmpty {
-            games.append(CodeBreaker(name: "Mastermind", pegChoices: [.red, .blue, .green, .yellow]))
-            games.append(CodeBreaker(name: "Earth Tones", pegChoices: [.orange, .brown, .black, .yellow, .green]))
-            games.append(CodeBreaker(name: "Undersea", pegChoices: [.blue, .indigo, .cyan]))
-            selection = games[Int.random(in: 0..<games.count)]
+        let fetchDescriptor = FetchDescriptor<CodeBreaker>()
+        if let results = try? modelContext.fetchCount(fetchDescriptor), results == 0 {
+            modelContext.insert(CodeBreaker(name: "Mastermind", pegChoices: [.red,.blue,.green,.yellow]))
+            modelContext.insert(CodeBreaker(name: "Earth Tones", pegChoices: [.orange,.brown,.black,.yellow,.green]))
+            modelContext.insert(CodeBreaker(name: "Undersea", pegChoices: [.blue,.indigo,.cyan]))
         }
     }
 }
 
-#Preview {
+#Preview(traits: .swiftData) {
     @Previewable @State var selection: CodeBreaker?
     NavigationStack {
         GameList(selection: $selection)
