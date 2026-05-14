@@ -20,6 +20,7 @@ typealias Peg = String
     var endTime: Date?
     var elapsedTime: TimeInterval = 0
     var lastAttemptDate: Date? = Date.now
+    var isOver: Bool = false
     
     var attempts: [Code] {
         get { _attempts.sorted { $0.timestamp > $1.timestamp } }
@@ -46,10 +47,6 @@ typealias Peg = String
         startTime = nil
     }
     
-    var isOver: Bool {
-        attempts.first?.pegs == masterCode.pegs
-    }
-    
     func restart() {
         masterCode.kind = .master(isHidden: true)
         masterCode.randomize(from: pegChoices)
@@ -58,6 +55,7 @@ typealias Peg = String
         startTime = .now
         endTime = nil
         elapsedTime = 0
+        isOver = false
     }
     
     func attemptGuess() {
@@ -69,7 +67,8 @@ typealias Peg = String
         attempts.insert(attempt, at: 0)
         lastAttemptDate = .now
         guess.reset()
-        if isOver {
+        if attempts.first?.pegs == masterCode.pegs {
+            isOver = true
             masterCode.kind = .master(isHidden: false)
             endTime = .now
             pauseTimer()
