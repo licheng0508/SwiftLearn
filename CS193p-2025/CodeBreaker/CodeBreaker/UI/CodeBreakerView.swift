@@ -56,6 +56,9 @@ struct CodeBreakerView: View {
             ToolbarItem(placement: .primaryAction) {
                 Button("Restart", systemImage: "arrow.circlepath", action: restart)
             }
+            ToolbarItem(placement: .primaryAction) {
+                Button("Save", systemImage: "square.and.arrow.down", action: save)
+            }
             ToolbarItem {
                 ElapsedTime(startTime: game.startTime, endTime: game.endTime, elapsedTime: game.elapsedTime)
                     .monospaced()
@@ -76,6 +79,15 @@ struct CodeBreakerView: View {
     func changePegAtSelection(to peg: Peg) {
         game.setGuessPeg(peg, at: selection)
         selection = (selection + 1) % game.masterCode.pegs.count
+    }
+    
+    func save() {
+        if let json = try? JSONEncoder().encode(game) {
+            let url = URL.documentsDirectory
+                .appendingPathComponent(game.name)
+                .appendingPathExtension("json")
+            try? json.write(to: url)
+        }
     }
     
     func restart() {
