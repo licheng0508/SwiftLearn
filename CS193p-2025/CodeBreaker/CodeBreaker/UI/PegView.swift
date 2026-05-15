@@ -11,7 +11,7 @@ struct PegView: View {
     
     let peg: Peg
     
-    let pegShape = Diamond()
+    let pegShape = PolygonShape(sides: 6)
     
     var body: some View {
         pegShape
