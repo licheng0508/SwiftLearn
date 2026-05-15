@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CodeBreakerView: View {
     
+    @Environment(\.sceneFrame) var sceneFrame
+    
     // MARK: Data
     let game: CodeBreaker
     
@@ -37,12 +39,18 @@ struct CodeBreakerView: View {
                     .transition(.attempt(game.isOver))
                 }
             }
-            if !game.isOver {
-                PegChooser(choices: game.pegChoices, onChoose: changePegAtSelection)
-                    .transition(.pegChooser)
-                    .frame(maxHeight: 90)
+            
+            GeometryReader { geometry in
+                if !game.isOver {
+                    let offset = sceneFrame.maxY - geometry.frame(in: .global).minY
+                    PegChooser(choices: game.pegChoices, onChoose: changePegAtSelection)
+                        .transition(.offset(x: 0, y: offset))
+                }
             }
+            .aspectRatio(CGFloat(game.pegChoices.count), contentMode: .fit)
+            .frame(maxHeight: 90)
         }
+        .highPriorityGesture(pegChoosingDial)
         .trackElapsedTime(in: game)
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
@@ -55,6 +63,14 @@ struct CodeBreakerView: View {
             }
         }
         .padding()
+    }
+    
+    var pegChoosingDial: some Gesture {
+        RotateGesture()
+            .onChanged { value in
+                let pegChoiceIndex = Int(abs(value.rotation.degrees.valid) / 45) % game.pegChoices.count
+                game.guess.pegs[selection] = game.pegChoices[pegChoiceIndex]
+            }
     }
     
     func changePegAtSelection(to peg: Peg) {

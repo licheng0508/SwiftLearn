@@ -11,7 +11,7 @@ struct PegView: View {
     
     let peg: Peg
     
-    let pegShape = Circle()
+    let pegShape = Diamond()
     
     var body: some View {
         pegShape

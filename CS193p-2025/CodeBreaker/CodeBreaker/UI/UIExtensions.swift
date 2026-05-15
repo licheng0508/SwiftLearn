@@ -38,3 +38,13 @@ extension Color {
         return Color(hue: 148/360, saturation: 0, brightness: brightness)
     }
 }
+
+extension Double {
+    
+    var valid: Double {
+        guard !isNaN, !isInfinite else {
+            return 0.0
+        }
+        return self
+    }
+}
